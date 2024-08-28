@@ -1,16 +1,29 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="w-full">
-      <div className="bg-gradient-to-r from-secondary   to-secondary/80  text-4xl text-background py-2 px-3 font-heading font-semibold">
+      <div className="bg-gradient-to-r from-secondary   to-secondary/80  text-4xl text-background py-2 px-3 font-action tracking-wide font-semibold">
         TEAM AI-HTML
       </div>
-      <div className="bg-secondary flex justify-center p-2 space-x-3 text-background ">
-        <div className=" hover:underline cursor-pointer ">Home</div>
-        <div className=" hover:underline cursor-pointer ">About Us</div>
-        <div className=" hover:underline cursor-pointer ">Carbon Emission</div>
-        <div className=" hover:underline cursor-pointer ">Carbon Credit</div>
+      <div className="bg-secondary flex justify-center p-2 gap-3 text-background ">
+        <NavLink to="/" className=" hover:font-semibold cursor-pointer ">
+          Home
+        </NavLink>
+        <div className=" hover:font-semibold cursor-pointer ">About Us</div>
+        <NavLink
+          to="carbon-emission"
+          className=" hover:font-semibold cursor-pointer "
+        >
+          Carbon Emission
+        </NavLink>
+        <div className=" hover:font-semibold cursor-pointer ">
+          Carbon Credit
+        </div>
+        <div className=" hover:font-semibold cursor-pointer ">
+          Coal Chatterman
+        </div>
       </div>
       {/* <div className="bg-accent px-2">News</div> */}
     </nav>

@@ -1,0 +1,140 @@
+{
+  "first": {
+    "data": {
+      "labels": [
+        "P R of China",
+        "India",
+        "Indonesia",
+        "United States",
+        "Australia",
+        "Russian Federation",
+        "South Africa",
+        "Germany",
+        "Others"
+      ],
+      "datasets": [
+        {
+          "label": "Production Share (%)",
+          "data": [51.8, 10.35, 7.81, 6.13, 5.04, 4.99, 2.57, 1.51, 7.24],
+          "backgroundColor": [
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(255, 99, 132, 0.6)",
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(75, 192, 192, 0.6)"
+          ],
+          "borderColor": [
+            "rgba(75, 192, 192, 1)",
+            "rgba(255, 99, 132, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)"
+          ],
+          "borderWidth": 1
+        }
+      ]
+    },
+    "options": {
+      "responsive": true,
+      "plugins": {
+        "legend": {
+          "position": "bottom"
+        },
+        "title": {
+          "display": true,
+          "text": "Coal Production Share by Country/Group"
+        }
+      },
+      "scales": {
+        "y": {
+          "beginAtZero": true,
+          "title": {
+            "display": true,
+            "text": "Production Share (%)"
+          }
+        }
+      },
+      "animation": {
+        "duration": 1000,
+        "easing": "easeInOutQuart"
+      }
+    }
+  },
+  "second": {
+    "data": {
+      "labels": [
+        "US",
+        "Russian Federation",
+        "Australia",
+        "China",
+        "India",
+        "Germany",
+        "Indonesia",
+        "Others"
+      ],
+      "datasets": [
+        {
+          "label": "Coal Reserve % Share",
+          "data": [23.18, 15.1, 13.99, 13.33, 10.34, 3.34, 3.25, 9.25],
+          "borderColor": "rgba(75, 192, 192, 1)",
+          "backgroundColor": "rgba(75, 192, 192, 0.2)",
+          "pointBackgroundColor": [
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(255, 99, 132, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)"
+          ],
+          "pointBorderColor": [
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(255, 99, 132, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(75, 192, 192, 1)"
+          ],
+          "pointRadius": [5, 5, 5, 5, 8, 5, 5, 5],
+          "pointHoverRadius": [7, 7, 7, 7, 10, 7, 7, 7]
+        }
+      ]
+    },
+    "options": {
+      "responsive": true,
+      "plugins": {
+        "legend": {
+          "position": "top"
+        },
+        "title": {
+          "display": true,
+          "text": "World Coal Reserve % Share by Country (India Highlighted)"
+        }
+      },
+      "scales": {
+        "y": {
+          "beginAtZero": true,
+          "title": {
+            "display": true,
+            "text": "Reserve % Share"
+          }
+        }
+      },
+      "animation": {
+        "duration": 1200,
+        "easing": "easeInOutBack"
+      }
+    }
+  }
+}
