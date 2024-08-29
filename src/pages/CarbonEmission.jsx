@@ -41,7 +41,6 @@ function CarbonEmission() {
       conversionFactor,
       co2EmissionFactor
     ).toFixed(2);
-    alert(`Annual CO2 in MllTonnes is ${emission}`);
 
     const newCalculation = {
       coalType,
@@ -56,7 +55,7 @@ function CarbonEmission() {
 
   return (
     <div className={`pt-24 pb-36 flex justify-evenly ${showAdvanced ? "h-[868px]" :"h-[600px]"} `}>
-      <div className="max-w-md mx-auto p-4 bg-white rounded shadow ">
+      <div className="max-w-md mx-auto p-4 bg-slate-600/5 rounded shadow ">
         <h2 className="text-2xl font-bold mb-4">
           Calculate Annual CO2 Emissions
         </h2>
@@ -64,9 +63,10 @@ function CarbonEmission() {
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Coal Type</label>
             <select
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded bg-white"
               value={coalType}
               onChange={handleCoalTypeChange}
+  
             >
               <option value="" >Select Coal Type</option>
               {Object.keys(data).map((type) => (
@@ -145,9 +145,9 @@ function CarbonEmission() {
           </button>
         </form>
       </div>
-      <div className="w-96 mx-auto">
+      <div className={`w-96 mx-auto ${calculations.length ===0?"hidden":""}`}>
 
-      <div className= {`p-4 bg-white rounded shadow  h-[100%] ${calculations.length ===0?"hidden":""} ${calculations.length >2?"overflow-y-scroll":""} `}>
+      <div className= {`p-4 bg-slate-600/5 rounded shadow  h-[100%]  ${calculations.length >2?"overflow-y-scroll":""} `}>
         <h2 className="text-2xl font-bold mb-4">Previous Calculations</h2>
         <ul>
           {calculations.map((calc, index) => (
