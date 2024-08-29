@@ -21,9 +21,9 @@ function Navbar() {
         <div className=" hover:font-semibold cursor-pointer ">
           Carbon Credit
         </div>
-        <div className=" hover:font-semibold cursor-pointer ">
+        <NavLink to="chat-bot" className=" hover:font-semibold cursor-pointer ">
           Coal Chatterman
-        </div>
+        </NavLink>
       </div>
       {/* <div className="bg-accent px-2">News</div> */}
     </nav>
