@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CarbonEmission from "./pages/CarbonEmission";
 import HomePage from "./pages/HomePage";
+import Chatterman from "./pages/Chatterman";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "carbon-emission",
         element: <CarbonEmission />,
+      },
+      {
+        path: "chat-bot",
+        element: <Chatterman />,
       },
     ],
   },

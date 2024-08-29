@@ -49,9 +49,9 @@ function Navbar() {
         <div className="px-2 py-1 hover:font-semibold cursor-pointer ">
           Carbon Credit
         </div>
-        <div className="px-2 py-1 hover:font-semibold cursor-pointer ">
+        <NavLink to="chat-bot" className="px-2 py-1 hover:font-semibold cursor-pointer ">
           Coal Chatterman
-        </div>
+        </NavLink>
       </div>
       {/* <div className="bg-accent px-2">News</div> */}
     </nav>
