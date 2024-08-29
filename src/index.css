@@ -3,3 +3,9 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Lexend:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap");
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
