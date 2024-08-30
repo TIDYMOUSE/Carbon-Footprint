@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Coal Mine Carbon Footprint Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Problem Description
 
-## Available Scripts
+### Background
 
-In the project directory, you can run:
+India faces a complex challenge in balancing its reliance on coal for energy with its climate change commitments. Coal mining is a major source of carbon emissions, a greenhouse gas contributing to global warming. To achieve carbon neutrality, the Indian coal sector needs to offset its emissions. This can be achieved through a combination of strategies such as reducing emissions from mining activities, adopting cleaner technologies, and offsetting remaining emissions by planting trees that absorb carbon dioxide.
 
-### `npm start`
+A web-based application can be a powerful tool in this journey by helping quantify a mine's carbon footprint and evaluate potential pathways to carbon neutrality.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Objectives
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The web-based application has the following objectives:
 
-### `npm test`
+1. **Activity-wise Quantification of Carbon Emission**: Quantify carbon emissions from various activities in coal mines.
+2. **Estimation of Existing Carbon Sinks**: Evaluate the current carbon absorption capacity of natural sinks.
+3. **Gap Analysis and Pathway Suggestions**: Analyze the gap between carbon emissions and sinks, and suggest pathways to achieve carbon neutrality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Expected Solution
 
-### `npm run build`
+A comprehensive software solution that includes:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Emission Estimation**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Allow users to input data on various mining activities (e.g., excavation, transportation, equipment usage) and estimate the associated carbon emissions based on established emission factors.
+  - Estimate per capita emissions of a mine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Carbon Neutrality Pathways**:
 
-### `npm run eject`
+  - Provide features for simulating different emission reduction strategies such as:
+    - Clean technologies: Assess the impact of adopting electric vehicles, methane capture systems, and renewable energy sources for mine operations.
+    - Afforestation offsets: Calculate the amount of land required for tree plantation to offset remaining emissions based on state-specific afforestation plans.
+    - Other Renewables: Explore alternative energy sources to reduce direct electricity consumption.
+    - Carbon Credits: Estimate potential carbon credits earned as per present market rates.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Data Visualization**:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Present results visually using charts and graphs to track emission trends and the effectiveness of implemented strategies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Benefits
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Sustainability Goals**: Aid Indian coal mines in their journey towards carbon neutrality and support the country's overall climate goals.
+- **Transparency**: Provide a clear picture of a mine's carbon footprint.
+- **Decision Support**: Help mine operators make informed choices for emission reduction.
+- **Cost Savings**: Identify opportunities to optimize operations and potentially reduce costs associated with emissions.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Implementation Details
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Implemented Features
 
-### Code Splitting
+- **CO2 Emission Calculation**: Allows users to calculate CO2 emissions based on mining activities and equipment usage.
+- **Afforestation Calculation**: Calculates the required land area for tree plantations to offset emissions.
+- **Energy Savings Estimation**: Estimates energy savings by switching from petrol-powered to electric-powered equipment and vehicles.
+- **Admin Page**: A dedicated admin page for managing user inputs, monitoring calculations, and handling application settings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### To-Do Features
 
-### Analyzing the Bundle Size
+- [x] **Data Visualization**: Develop charts and graphs to present emission trends and reduction strategies.
+- [] **Carbon Neutrality Pathways Simulation**: Implement features for simulating different emission reduction strategies, such as:
+  - [x] Adoption of clean technologies (electric vehicles, methane capture).
+  - [x] State-specific afforestation offsets.
+  - [ ] Exploring alternative renewable energy options.
+- [ ] **Carbon Credits Calculation**: Estimate potential carbon credits based on current market rates.
+- [x] **User Authentication**: Integrate Firebase authentication for secure access to the app.
+- [x] **Database Integration**: Use Firebase for data storage and retrieval.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Frontend**: React
+- **Backend**: Firebase
+- **Database**: Firebase Realtime Database / Firestore
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Team Information
 
-### Deployment
+- **Team Name**: AI-HTML
+- **Team Members**:
+  - Advait Yadav
+  - Mrudul Pawar
+  - Shreyash Borde
+  - Vinit Gaikwad
+  - Raj Sapale
+  - Pranjali Narote
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## SETUP
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Setting up repo**
+   ```base
+   git clone https://github.com/TIDYMOUSE/carbon-footprint
+   npm install
+   ```
+2. **Running on Local maching**:
+   ```bash
+   npm start
+   ```
