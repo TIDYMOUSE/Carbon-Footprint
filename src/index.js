@@ -7,12 +7,18 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CarbonEmission from "./pages/CarbonEmission";
 import HomePage from "./pages/HomePage";
 import Chatterman from "./pages/Chatterman";
+import Admin from "./pages/Admin";
+import AdminLoginPage from "./pages/AdminLogin";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Error from "./pages/Error";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement:<Error/>,
     children: [
       {
         path: "/",
@@ -27,7 +33,29 @@ const router = createBrowserRouter([
         element: <Chatterman />,
       },
     ],
+
   },
+  {
+    path:"/dashboard",
+    element:<Dashboard/>,
+    errorElement:<Error/>,
+  },
+  {
+    path:"/login",
+    element:<Login/>,
+    errorElement:<Error/>,
+  },
+  {
+    path: "/admin",
+    element: <Admin/>,
+    errorElement:<Error/>,
+
+  },
+  {
+    path: "/admin/login",
+    element:<AdminLoginPage/>,
+    errorElement:<Error/>,
+  }
 ]);
 
 root.render(
