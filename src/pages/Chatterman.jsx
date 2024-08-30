@@ -74,42 +74,54 @@ const Chatterman = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       handleQuery(e);
-      e.preventDefault(); // Prevent the default action (form submission, etc.)
     }
   };
-  return (
-    <div className="   gap-2 p-10">
-      <div className="flex items-center h-full justify-center w-full">
-        {spinner && <Loader />}
-      </div>
 
-      <div className="w-full h-full flex flex-col justify-center items-center ">
+  return (
+    <>
+      <div className=" p-10 justify-center items-center">
+        {spinner && (
+          <div className="flex items-center justify-center w-full h-full">
+            <Loader />
+          </div>
+        )}
+        {!spinner && !response && (
+          <div className="w-full h-full text-center ">
+            <h2 className="font-action text-3xl ">
+              Welcome, I am Coal Chatterman
+            </h2>
+            <p className="text-sm">How can I help you today?</p>
+          </div>
+        )}
+
         {!spinner && response && (
-          <div className="w-3/4 text-lg border-primary border-2 p-6 rounded-md bg-background/75">
-            <h2 className="text-2xl font-action mb-2">Coal Chatterman :</h2>
-            <div className="">{response}</div>
+          <div className="w-full flex flex-col justify-center items-center ">
+            <div className="w-3/4 text-lg border-secondary border-2 p-6 rounded-md bg-background/75">
+              <h2 className="text-2xl font-action mb-2">Coal Chatterman :</h2>
+              <div className="">{response}</div>
+            </div>
           </div>
         )}
       </div>
-
-      <div className="flex justify-center items-center w-full">
-        <div className="flex gap-2 justify-center items-center w-full fixed bottom-0 m-3 ">
-          <input
-            className="w-3/4 h-16 px-4 text-gray-500 bg-gray-100 border-0 rounded-md placeholder-gray-500"
-            placeholder="Enter your query"
-            onKeyDown={handleKeyDown}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <button
-            className=" h-16 px-3 bg-accent text-white rounded-md hover:bg-accent/80"
-            onClick={handleQuery}
-          >
-            ENTER
-          </button>
-        </div>
+      {/* <div className="flex justify-center items-center w-full"> */}
+      <div className="flex gap-2 justify-center items-center w-full fixed bottom-0 m-3 ">
+        <input
+          className="w-3/4 h-16 px-4 text-gray-500 bg-gray-100 border-0 rounded-md placeholder-gray-500"
+          placeholder="Enter your query"
+          onKeyDown={handleKeyDown}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button
+          className="h-16 px-3 bg-accent text-white rounded-md hover:bg-accent/90"
+          onClick={handleQuery}
+        >
+          ENTER
+        </button>
+        {/* </div> */}
       </div>
-    </div>
+    </>
   );
 };
 

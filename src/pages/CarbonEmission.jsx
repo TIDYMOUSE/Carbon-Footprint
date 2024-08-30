@@ -29,9 +29,9 @@ function CarbonEmission() {
     setCalculations(calculations.filter((_, i) => i !== index));
   };
   const handleSubmit = (e) => {
-    if(!coalType.length){
-      alert("Choose a valid coal type")
-      return
+    if (!coalType.length) {
+      alert("Choose a valid coal type");
+      return;
     }
     e.preventDefault();
     const emission = annualCO2inMilTonnes(
@@ -40,7 +40,7 @@ function CarbonEmission() {
       exclusionFactor,
       conversionFactor,
       co2EmissionFactor
-    ).toFixed(2);
+    );
 
     const newCalculation = {
       coalType,
@@ -54,9 +54,9 @@ function CarbonEmission() {
   }, [calculations]);
 
   return (
-    <div className={`pt-24 pb-36 flex justify-evenly ${showAdvanced ? "h-[868px]" :"h-[600px]"} `}>
-      <div className="max-w-md mx-auto p-4 bg-slate-600/5 rounded shadow ">
-        <h2 className="text-2xl font-bold mb-4">
+    <div className={`flex justify-between w-full my-2 px-10 h-[90%]`}>
+      <div className=" rounded  ">
+        <h2 className="text-2xl font-action font-bold mb-4">
           Calculate Annual CO2 Emissions
         </h2>
         <form onSubmit={handleSubmit}>
@@ -66,9 +66,8 @@ function CarbonEmission() {
               className="w-full p-2 border rounded bg-white"
               value={coalType}
               onChange={handleCoalTypeChange}
-  
             >
-              <option value="" >Select Coal Type</option>
+              <option value="">Select Coal Type</option>
               {Object.keys(data).map((type) => (
                 <option key={type} value={type}>
                   {type}
@@ -77,7 +76,7 @@ function CarbonEmission() {
             </select>
           </div>
 
-          <div className="mb-4">
+          <div className="mb-2">
             <label className="block text-sm font-medium mb-1">
               Yearly Production (Tonnes)
             </label>
@@ -93,13 +92,13 @@ function CarbonEmission() {
           <button
             type="button"
             onClick={() => setShowAdvanced(!showAdvanced)}
-            className="flex items-center text-sm text-secondary hover:underline mb-4"
+            className="flex items-center text-sm text-secondary hover:underline mb-2"
           >
             {showAdvanced ? "-" : "+"} Advanced Inputs
           </button>
 
           {showAdvanced && (
-            <div className="space-y-4 mb-4">
+            <div className="space-y-2 ">
               <div>
                 <label className="block text-sm font-medium mb-1">
                   Exclusion Factor
@@ -145,13 +144,21 @@ function CarbonEmission() {
           </button>
         </form>
       </div>
-      <div className={`w-96 mx-auto ${calculations.length ===0?"hidden":""}`}>
 
-      <div className= {`p-4 bg-slate-600/5 rounded shadow  h-[100%]  ${calculations.length >2?"overflow-y-scroll":""} `}>
-        <h2 className="text-2xl font-bold mb-4">Previous Calculations</h2>
-        <ul>
+      <div
+        className={` flex shadow-md bg-background/80 rounded-md  flex-col  justify-between w-[30%]`}
+      >
+        <h2 className="text-2xl p-2 rounded-t-md text-center font-bold text-white bg-secondary/85 font-action tracking-wide">
+          Coal List
+        </h2>
+        <div
+          className={` flex flex-col gap-2 w-full flex-grow rounded p-2 h-[300px] overflow-y-scroll `}
+        >
           {calculations.map((calc, index) => (
-            <li key={index} className="mb-4 border-2 border-primary px-3 py-2 rounded-md relative">
+            <div
+              key={index}
+              className="border-2 border-primary px-3 py-2 h-fit w-full  rounded-md relative"
+            >
               <div>
                 <strong>Coal Type:</strong> {calc.coalType}
               </div>
@@ -160,22 +167,29 @@ function CarbonEmission() {
                 tonnes
               </div>
               <div>
-                <strong>CO2 Emissions:</strong> {calc.emission} million tonnes
+                <strong>CO2 Emissions:</strong>{" "}
+                {parseFloat(calc.emission).toFixed(2)} million tonnes
               </div>
               <button
-                  onClick={() => handleRemove(index)}
-                  className="text-xs text-red-500 mt-2 border-2 border-red-500 px-1 rounded-2xl absolute right-1 -top-1"
-                >
-                  X
-                </button>
-            </li>
+                onClick={() => handleRemove(index)}
+                className="text-xs text-red-500 mt-2 border-2 border-red-500 px-1 rounded-2xl absolute right-1 -top-1"
+              >
+                X
+              </button>
+            </div>
           ))}
-        </ul>
-          <div className="">
-
-          <h2 className="text-2xl font-bold mb-4">Total Emissions = {calculations.reduce((total,object)=>{return total+parseFloat(object.emission)},0)} <span className="text-nowrap"> million tonnes </span></h2>
-          </div>
-      </div>
+        </div>
+        <div className=" bg-accent rounded-b-md text-center p-3 ">
+          <h2 className="text-2xl  text-white font-action">
+            Total Emissions ={" "}
+            {parseFloat(
+              calculations.reduce((total, object) => {
+                return total + parseFloat(object.emission);
+              }, 0)
+            ).toFixed(3)}{" "}
+            <span className="text-nowrap"> million tonnes </span>
+          </h2>
+        </div>
       </div>
     </div>
   );
