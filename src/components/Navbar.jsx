@@ -37,7 +37,7 @@ function Navbar() {
     <nav className="w-full relative " >
       <div className="items-center px-6 h-16 bg-gradient-to-r from-secondary from-[25%] via-secondary/70  to-secondary to-[75%]  text-4xl text-accent py-2 font-action tracking-wide font-semibold flex justify-between">
         TEAM AI-HTML
-        <div className={`flex px-2 text-white text-base py-1 gap-2 ${showSearch?"border-white border-2 rounded" :""}`}>
+        <div className={`flex px-3 text-white text-base py-1 gap-2 ${showSearch?"border-white border-2 rounded-2xl" :""}`}>
                     <button onFocus={()=>{
                         setshowSearch(true)
                     }}
@@ -46,9 +46,9 @@ function Navbar() {
                             setshowSearch(false)
                         }}
                     }>
-                        <FaSearch className='text-[1.5rem]' />
+                        <FaSearch className='text-[1.3rem]' />
                     </button>
-                    <input className={`bg-secondary focus:outline-none ${showSearch ?'block':'hidden'}`} type="text" name="" id="" placeholder='search' 
+                    <input className={`bg-secondary focus:outline-none ${showSearch ?'block':'hidden'} `} type="text" name="" id="" placeholder='search' 
                     onMouseEnter={()=>{setinputHover(true)}}
                     onMouseLeave={()=>{setinputHover(false)}}
                     onBlur={()=>{setinputHover(false)
