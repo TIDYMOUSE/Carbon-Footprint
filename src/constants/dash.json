@@ -1,0 +1,37 @@
+{
+  "Anthracite": {
+    "yearlyProduction": 3,
+    "conversionFactorTJ_kt": 27.5,
+    "co2EmissionFactor_kg_CO2_TJ": 98000,
+    "conversionFactor_tonne_CO2_tonne_coal": 2.55,
+    "exclusionFactor": 0.015
+  },
+  "Bituminous (Coking)": {
+    "yearlyProduction": 2,
+    "conversionFactorTJ_kt": 28.8,
+    "co2EmissionFactor_kg_CO2_TJ": 95000,
+    "conversionFactor_tonne_CO2_tonne_coal": 2.65,
+    "exclusionFactor": 0.02
+  },
+  "Bituminous (non coking)": {
+    "yearlyProduction": 1,
+    "conversionFactorTJ_kt": 26.3,
+    "co2EmissionFactor_kg_CO2_TJ": 94000,
+    "conversionFactor_tonne_CO2_tonne_coal": 2.44,
+    "exclusionFactor": 0.018
+  },
+  "Subbituminous": {
+    "yearlyProduction": 3,
+    "conversionFactorTJ_kt": 19.0,
+    "co2EmissionFactor_kg_CO2_TJ": 96000,
+    "conversionFactor_tonne_CO2_tonne_coal": 1.81,
+    "exclusionFactor": 0.017
+  },
+  "Lignite": {
+    "yearlyProduction": 1,
+    "conversionFactorTJ_kt": 12.1,
+    "co2EmissionFactor_kg_CO2_TJ": 101500,
+    "conversionFactor_tonne_CO2_tonne_coal": 1.6,
+    "exclusionFactor": 0.025
+  }
+}
