@@ -18,7 +18,8 @@ const SignupForm = () => {
   const navigate = useNavigate();
   const [error, seterror] = useState(null);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       const { email, password } = form;
       const userCredential = await createUserWithEmailAndPassword(
@@ -51,6 +52,7 @@ const SignupForm = () => {
 
   return (
     <div>
+      <form onSubmit={handleSubmit}>
       <div className="flex flex-col my-8 gap-8">
         <div className="border-black border-2 rounded-full px-6 py-3 flex items-center">
           <MdOutlineEmail className="text-xl mr-4 text-Red" />
@@ -82,12 +84,13 @@ const SignupForm = () => {
           />
         </div>
         <button
-          onClick={handleSubmit}
+        type="submit"
           className="bg-Black text-White rounded-full p-2 bg-secondary/90 hover:bg-secondary text-white font-bold transition-all duration-200"
         >
           Sign Up
         </button>
       </div>
+      </form>
     </div>
   );
 };

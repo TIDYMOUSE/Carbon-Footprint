@@ -121,7 +121,7 @@ function Navbar() {
               <FaBars className="text-2xl" />
             </button>
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10">
+              <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10 overflow-hidden">
                 <div
                   onClick={() => {
                     signOut(firebaseAuth);
@@ -129,7 +129,7 @@ function Navbar() {
                 >
                   <a
                     href="#"
-                    className="block px-4 py-2 hover:bg-Black rounded-lg m-[2%]"
+                    className="block px-4 py-2 hover:bg-black/20 "
                     onClick={closeDropdown}
                   >
                     Logout
@@ -137,14 +137,14 @@ function Navbar() {
                 </div>
                 <NavLink
                   to="/dashboard"
-                  className="block px-4 py-2 hover:bg-Black rounded-lg m-[2%]"
+                  className="block px-4 py-2 hover:bg-black/20 "
                   onClick={closeDropdown}
                 >
                   Dashboard
                 </NavLink>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-Black rounded-lg m-[2%]"
+                  className="block px-4 py-2 hover:bg-black/20 "
                   onClick={closeDropdown}
                 >
                   List Item 3

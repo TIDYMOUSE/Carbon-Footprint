@@ -1,16 +1,12 @@
-import { onAuthStateChanged } from "firebase/auth";
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { firebaseAuth } from "../utils/firebase-config";
-import { Pie } from "react-chartjs-2";
+import React from "react";
+import { Bar } from "react-chartjs-2";
 import data from "../constants/dash.json";
 import { annualCO2inMilTonnes } from "../utils/emission";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Dashboard = () => {
-  const navigate = useNavigate();
   const coalTypes = Object.keys(data);
 
   // Calculate emissions for each coal type
@@ -22,7 +18,6 @@ const Dashboard = () => {
       co2EmissionFactor_kg_CO2_TJ,
     } = data[coalType];
 
-    // Calculate CO2 emission for the current coal type
     return annualCO2inMilTonnes(
       yearlyProduction,
       coalType,
@@ -38,25 +33,14 @@ const Dashboard = () => {
       {
         label: "CO2 Emission in Million Tonnes",
         data: emissionData,
-        backgroundColor: [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56",
-          "#4BC0C0",
-          "#9966FF",
-        ],
-        hoverBackgroundColor: [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56",
-          "#4BC0C0",
-          "#9966FF",
-        ],
+        backgroundColor: "#36A2EB",
+        borderColor: "#36A2EB",
+        borderWidth: 1,
       },
     ],
   };
 
-  let emission = 0;
+  let totalEmission = 0;
   Object.keys(data).forEach((coalType) => {
     const {
       yearlyProduction,
@@ -65,7 +49,7 @@ const Dashboard = () => {
       co2EmissionFactor_kg_CO2_TJ,
     } = data[coalType];
 
-    emission += annualCO2inMilTonnes(
+    totalEmission += annualCO2inMilTonnes(
       yearlyProduction,
       coalType,
       exclusionFactor,
@@ -74,42 +58,52 @@ const Dashboard = () => {
     );
   });
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(firebaseAuth, (currentUser) => {
-      if (!currentUser) {
-        navigate("/");
-      }
-    });
-
-    return () => unsubscribe();
-  }, [navigate]);
-
   return (
     <div className="flex flex-col gap-4 w-full bg-background min-h-screen p-5">
-      <section className="w-full flex gap-4 items-start">
-        <div className="flex flex-col  w-1/4 space-y-4 bg-primary p-5  rounded-md shadow-md">
-          <h2 className="text-white text-4xl font-semibold">CO2 EMISSION</h2>
-          <h2 className="text-white text-xl">
-            <span className="text-4xl font-semibold text-accent underline">
-              {parseFloat(emission).toFixed(3)}
-            </span>{" "}
-            million Tonnes
-          </h2>
-        </div>
+      {/* CO2 Emission Section */}
+      <div className="flex flex-row-reverse gap-3">
 
-        <div className="flex justify-center items-center w-full bg-white shadow-md rounded-md h-1/3">
-          <Pie data={chartData} />
-        </div>
+        <section className="w-full flex">
+          <div className="flex w-full bg-white p-5 rounded-md shadow-md">
+            <div className="w-1/2 h-[350px]">
+              <Bar data={chartData} options={{ responsive: true, maintainAspectRatio: false }} />
+            </div>
+            
+          <section className="w-1/2 bg-white p-5 rounded-md">
+          <h2 className="text-2xl font-semibold mb-3">Key Metrics</h2>
+          <div className="flex flex-col gap-4">
+            <div className="p-4 bg-background rounded-md">
+              <h3 className="text-xl font-semibold">Total Emissions</h3>
+              <p>{parseFloat(totalEmission).toFixed(3)} million Tonnes</p>
+            </div>
+            <div className="p-4 bg-background rounded-md">
+              <h3 className="text-xl font-semibold">Progress Towards Carbon Neutrality</h3>
+              <p>Currently at 25% of target</p>
+            </div>
+          </div>
+        </section>
+
+          </div>
+        </section>
+      </div>
+
+      {/* Overview Section */}
+      <section className="w-full bg-white p-5 shadow-md rounded-md">
+        <h2 className="text-2xl font-semibold mb-3">Overview</h2>
+        <p>
+          This section provides a summary of the mine's carbon footprint,
+          including a breakdown of CO2 emissions by coal type and key metrics
+          related to carbon neutrality.
+        </p>
       </section>
 
-      <section className="w-full flex flex-col bg-white p-5 shadow-md rounded-md mt-5">
-        <h2 className="text-2xl font-semibold mb-3">Manage Admins</h2>
-
-        <div className="flex w-full flex-col p-3 gap-2 rounded-md bg-background">
-          <div className="p-2 bg-white rounded-md ">XDD</div>
-          <div className="p-2 bg-white rounded-md ">XDD</div>
-          <div className="p-2 bg-white rounded-md ">XDD</div>
-          <div className="p-2 bg-white rounded-md ">XDD</div>
+      {/* Recent Activities Section */}
+      <section className="w-full bg-white p-5 shadow-md rounded-md">
+        <h2 className="text-2xl font-semibold mb-3">Recent Activities</h2>
+        <div className="flex flex-col gap-3">
+          <div className="p-3 bg-background rounded-md">Updated emission data for Coal Type A</div>
+          <div className="p-3 bg-background rounded-md">Added new entry for Mine B</div>
+          <div className="p-3 bg-background rounded-md">Reviewed carbon neutrality progress</div>
         </div>
       </section>
     </div>
