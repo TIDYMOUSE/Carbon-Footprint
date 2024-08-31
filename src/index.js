@@ -12,6 +12,7 @@ import AdminLoginPage from "./pages/AdminLogin";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
+import DashLayout from "./pages/DashLayout";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -37,8 +38,23 @@ const router = createBrowserRouter([
   },
   {
     path:"/dashboard",
-    element:<Dashboard/>,
+    element:<DashLayout/>,
     errorElement:<Error/>,
+    children :[
+      {
+        path:"",
+        element:<Dashboard/>,
+
+      },
+      {
+        path:"carbon-emission",
+        element:<CarbonEmission/>,
+      },
+      {
+        path: "chat-bot",
+        element: <Chatterman/>,
+      },
+    ]
   },
   {
     path:"/login",

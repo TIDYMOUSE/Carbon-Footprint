@@ -38,6 +38,7 @@ function DashNav() {
     return () => unsubscribe();
   }, [navigate]);
   useEffect(() => {
+    console.log(activeLink);
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       if (prevScrollpos > currentScrollPos) {
@@ -47,7 +48,7 @@ function DashNav() {
       }
       setPrevScrollpos(currentScrollPos);
 
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -63,28 +64,25 @@ function DashNav() {
   }, [prevScrollpos]);
   return (
     <nav className="w-full relative ">
-      <div className="relative">
-        <div
-          className={` z-50 transition-all ease-in-out  bg-secondary flex justify-center p-2 gap-3 text-background ${
+      <div className={`z-50 w-full transition-all ease-in-out ${
             isScrolled ? `fixed` : ""
-          }`}
-          style={{ top: `${top}px` }}
+          }`} style={{ top: `${top}px` }}>
+        <div
+          className={`   bg-secondary flex justify-center p-2 gap-3 text-background `}
+          
         >
           <NavLink
-            to="/"
+            to=""
             className={`px-2 py-1 ${
-              activeLink === "/" ? "text-accent" : ""
+              activeLink === "/dashboard" ? "text-accent" : ""
             } hover:font-semibold cursor-pointer`}
           >
             Home
           </NavLink>
-          <NavLink className={`px-2 py-1 hover:font-semibold cursor-pointer`}>
-            About Us
-          </NavLink>
           <NavLink
             to="carbon-emission"
             className={`px-2 py-1 ${
-              activeLink === "/carbon-emission" ? "text-accent" : ""
+              activeLink === "/dashboard/carbon-emission" ? "text-accent" : ""
             } hover:font-semibold cursor-pointer `}
           >
             Carbon Emission
@@ -95,7 +93,7 @@ function DashNav() {
           <NavLink
             to="chat-bot"
             className={`px-2 py-1 ${
-              activeLink === "/chat-bot" ? "text-accent" : ""
+              activeLink === "chat-bot" ? "text-accent" : ""
             } hover:font-semibold cursor-pointer `}
           >
             Coal Chatterman
@@ -110,7 +108,7 @@ function DashNav() {
               <FaRegCircleUser className="text-2xl" />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-8 right-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10">
+              <div className="absolute top-8 right-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10 overflow-hidden">
                 <div
                   onClick={() => {
                     signOut(firebaseAuth);
@@ -118,7 +116,7 @@ function DashNav() {
                 >
                   <a
                     href="#"
-                    className="block px-4 py-2 hover:bg-black/20 rounded-lg"
+                    className="block px-4 py-2 hover:bg-black/20 "
                     onClick={closeDropdown}
                   >
                     Logout
@@ -126,14 +124,14 @@ function DashNav() {
                 </div>
                 <NavLink
                   to="/dashboard"
-                  className="block px-4 py-2 hover:bg-black/20 rounded-lg "
+                  className="block px-4 py-2 hover:bg-black/20  "
                   onClick={closeDropdown}
                 >
                   Dashboard
                 </NavLink>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-black/20 rounded-lg"
+                  className="block px-4 py-2 hover:bg-black/20 "
                   onClick={closeDropdown}
                 >
                   List Item 3

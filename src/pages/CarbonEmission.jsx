@@ -54,7 +54,7 @@ function CarbonEmission() {
   }, [calculations]);
 
   return (
-    <div className={`flex justify-between w-full my-2 px-10 h-[90%]`}>
+    <div className={`flex justify-around w-full my-2 pt-8 px-10 h-[90%]`}>
       <div className=" rounded  ">
         <h2 className="text-2xl font-action font-bold mb-4">
           Calculate Annual CO2 Emissions
@@ -138,7 +138,7 @@ function CarbonEmission() {
 
           <button
             type="submit"
-            className="w-full bg-secondary text-white py-2 rounded mt-2"
+            className="w-full bg-secondary/85 hover:bg-secondary text-white py-2 rounded mt-2"
           >
             Calculate
           </button>
