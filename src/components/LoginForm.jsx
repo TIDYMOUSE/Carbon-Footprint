@@ -7,6 +7,7 @@ import { CiLock } from "react-icons/ci";
 import Cookies from "js-cookie";
 
 const LoginForm = () => {
+  
   const [form, setform] = useState({
     email: "",
     password: "",
@@ -14,7 +15,8 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const [error, seterror] = useState(null);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       const { email, password } = form;
       const userCredential = await signInWithEmailAndPassword(
@@ -41,7 +43,7 @@ const LoginForm = () => {
   });
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
       <div className="flex flex-col my-8 gap-8">
         <div className="border-black border-2 rounded-full px-6 py-3 flex items-center">
           <MdOutlineEmail className="text-xl mr-4 text-Red" />
@@ -74,7 +76,6 @@ const LoginForm = () => {
         </div>
         <button
         type="submit"
-          onClick={handleSubmit}
           className="bg-Black text-White rounded-full p-2 bg-secondary/90 hover:bg-secondary text-white  font-bold transition-colors duration-200"
         >
           Login
