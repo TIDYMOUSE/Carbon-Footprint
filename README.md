@@ -1,5 +1,7 @@
 # Coal Mine Carbon Footprint Web Application
 
+# DEPLOYMENT: <a href="https://carbon-footprint-ochre.vercel.app/">Green Footprint</a>
+
 ## Problem Description
 
 ### Background
@@ -65,6 +67,7 @@ A comprehensive software solution that includes:
 - [ ] **Carbon Credits Calculation**: Estimate potential carbon credits based on current market rates.
 - [x] **User Authentication**: Integrate Firebase authentication for secure access to the app.
 - [x] **Database Integration**: Use Firebase for data storage and retrieval.
+- [] **ML Integration**: to calculate clean energy estimations and reliable profits and WebGL for 3D rendering on website.
 
 ---
 
