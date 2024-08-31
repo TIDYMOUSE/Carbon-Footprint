@@ -96,7 +96,7 @@ A comprehensive software solution that includes:
    git clone https://github.com/TIDYMOUSE/carbon-footprint
    npm install
    ```
-2. **Running on Local maching**:
+2. **Running on Local machine**:
    ```bash
    npm start
    ```
