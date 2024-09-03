@@ -64,12 +64,14 @@ function DashNav() {
   }, [prevScrollpos]);
   return (
     <nav className="w-full relative ">
-      <div className={`z-50 w-full transition-all ease-in-out ${
-            isScrolled ? `fixed` : ""
-          }`} style={{ top: `${top}px` }}>
+      <div
+        className={`z-50 w-full transition-all ease-in-out ${
+          isScrolled ? `fixed` : ""
+        }`}
+        style={{ top: `${top}px` }}
+      >
         <div
           className={`   bg-secondary flex justify-center p-2 gap-3 text-background `}
-          
         >
           <NavLink
             to=""
@@ -97,6 +99,14 @@ function DashNav() {
             } hover:font-semibold cursor-pointer `}
           >
             Coal Chatterman
+          </NavLink>
+          <NavLink
+            to="mine-map"
+            className={`px-2 py-1 ${
+              activeLink === "chat-bot" ? "text-accent" : ""
+            } hover:font-semibold cursor-pointer `}
+          >
+            Mine Map
           </NavLink>
         </div>
         <div className="absolute right-3 top-3">

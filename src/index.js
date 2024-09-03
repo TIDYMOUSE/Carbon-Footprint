@@ -13,13 +13,14 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import DashLayout from "./pages/DashLayout";
+import MineMap from "./pages/MineMap";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement:<Error/>,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -34,44 +35,45 @@ const router = createBrowserRouter([
         element: <Chatterman />,
       },
     ],
-
   },
   {
-    path:"/dashboard",
-    element:<DashLayout/>,
-    errorElement:<Error/>,
-    children :[
+    path: "/dashboard",
+    element: <DashLayout />,
+    errorElement: <Error />,
+    children: [
       {
-        path:"",
-        element:<Dashboard/>,
-
+        path: "",
+        element: <Dashboard />,
       },
       {
-        path:"carbon-emission",
-        element:<CarbonEmission/>,
+        path: "carbon-emission",
+        element: <CarbonEmission />,
       },
       {
         path: "chat-bot",
-        element: <Chatterman/>,
+        element: <Chatterman />,
       },
-    ]
+      {
+        path: "mine-map",
+        element: <MineMap />,
+      },
+    ],
   },
   {
-    path:"/login",
-    element:<Login/>,
-    errorElement:<Error/>,
+    path: "/login",
+    element: <Login />,
+    errorElement: <Error />,
   },
   {
     path: "/admin",
-    element: <Admin/>,
-    errorElement:<Error/>,
-
+    element: <Admin />,
+    errorElement: <Error />,
   },
   {
     path: "/admin/login",
-    element:<AdminLoginPage/>,
-    errorElement:<Error/>,
-  }
+    element: <AdminLoginPage />,
+    errorElement: <Error />,
+  },
 ]);
 
 root.render(
