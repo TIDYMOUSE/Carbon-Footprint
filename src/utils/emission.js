@@ -24,3 +24,8 @@ export function annualCO2inMilTonnes(
     10_00_000
   );
 }
+export function CO2ByTransport(mode, tonnes, distance) {
+  if (mode === "Truck") {
+    return 2.6444 * distance * tonnes;
+  } else return 2.64 * distance * tonnes;
+}

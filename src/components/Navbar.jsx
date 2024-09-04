@@ -179,7 +179,12 @@ function Navbar() {
         >
           Carbon Emission
         </NavLink>
-        <NavLink className="px-2 py-1 hover:font-semibold cursor-pointer ">
+        <NavLink
+          to="carbon-credit"
+          className={`px-2 py-1 ${
+            activeLink === "/carbon-credit" ? "text-accent" : ""
+          } hover:font-semibold cursor-pointer `}
+        >
           Carbon Credit
         </NavLink>
         <NavLink

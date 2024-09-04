@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import DashLayout from "./pages/DashLayout";
 import MineMap from "./pages/MineMap";
+import CarbonCredit from "./pages/CarbonCredit";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "carbon-emission",
         element: <CarbonEmission />,
+      },
+      {
+        path: "carbon-credit",
+        element: <CarbonCredit/>,
       },
       {
         path: "chat-bot",
@@ -56,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "mine-map",
         element: <MineMap />,
+      },
+      {
+        path: "carbon-credit",
+        element: <CarbonCredit/>,
       },
     ],
   },
