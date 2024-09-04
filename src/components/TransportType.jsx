@@ -176,7 +176,7 @@ function TransportType({ onEmissionChange }) {
         className={` flex shadow-md bg-background/80 rounded-md  flex-col  justify-between w-[30%]`}
       >
         <h2 className="text-2xl p-2 rounded-t-md text-center font-bold text-white bg-secondary/85 font-action tracking-wide">
-          Transp List
+          Transport List
         </h2>
         <div
           className={` flex flex-col gap-2 w-full flex-grow rounded p-2 h-[300px] overflow-y-scroll `}
