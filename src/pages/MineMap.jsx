@@ -3,7 +3,7 @@ import MapboxExample from "../components/map";
 function MineMap() {
   return (
     <>
-      <div className="m-5 h-full">
+      <div className="h-full">
         <MapboxExample />
       </div>
     </>

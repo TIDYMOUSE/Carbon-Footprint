@@ -95,7 +95,7 @@ function DashNav() {
           <NavLink
             to="chat-bot"
             className={`px-2 py-1 ${
-              activeLink === "chat-bot" ? "text-accent" : ""
+              activeLink === "/dashboard/chat-bot" ? "text-accent" : ""
             } hover:font-semibold cursor-pointer `}
           >
             Coal Chatterman
@@ -103,7 +103,7 @@ function DashNav() {
           <NavLink
             to="mine-map"
             className={`px-2 py-1 ${
-              activeLink === "chat-bot" ? "text-accent" : ""
+              activeLink === "/dashboard/mine-map" ? "text-accent" : ""
             } hover:font-semibold cursor-pointer `}
           >
             Mine Map

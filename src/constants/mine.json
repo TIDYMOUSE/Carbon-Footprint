@@ -1,104 +1,303 @@
 {
   "Delhi": [
     [77.20301700350693, 28.643684739949062],
-    "Capital city of India with various mining offices."
+    "Capital city of India with various mining offices.",
+    "500,000 tons/year",
+    "50 sq km",
+    "1,200 employees"
   ],
-
   "Jharia, Dhanbad": [
     [86.414, 23.7545],
-    "Major coal mining area in Jharkhand, India."
+    "Major coal mining area in Jharkhand, India.",
+    "30,000 tons/year",
+    "40 sq km",
+    "2,500 employees"
   ],
-  "Bokaro": [[86.1511, 23.6693], "Known for coal and steel industries."],
-  "Jayanti": [[89.5814, 26.7075], "Coal mining region in West Bengal, India."],
-  "Godda": [[87.2144, 24.8271], "Coal mining area in Jharkhand, India."],
+  "Bokaro": [
+    [86.1511, 23.6693],
+    "Known for coal and steel industries.",
+    "150,000 tons/year",
+    "60 sq km",
+    "3,000 employees"
+  ],
+  "Jayanti": [
+    [89.5814, 26.7075],
+    "Coal mining region in West Bengal, India.",
+    "80,000 tons/year",
+    "25 sq km",
+    "1,500 employees"
+  ],
+  "Godda": [
+    [87.2144, 24.8271],
+    "Coal mining area in Jharkhand, India.",
+    "50,000 tons/year",
+    "30 sq km",
+    "1,800 employees"
+  ],
   "Giridih (Karbhari Coal Field)": [
     [86.3149, 24.1877],
-    "Coalfield located in Giridih, Jharkhand."
+    "Coalfield located in Giridih, Jharkhand.",
+    "70,000 tons/year",
+    "35 sq km",
+    "2,000 employees"
   ],
-  "Ramgarh": [[85.52, 23.6314], "Coal mining district in Jharkhand."],
-  "Karanpura": [[84.9757, 23.8823], "Important coal mining area in Jharkhand."],
+  "Ramgarh": [
+    [85.52, 23.6314],
+    "Coal mining district in Jharkhand.",
+    "90,000 tons/year",
+    "45 sq km",
+    "2,200 employees"
+  ],
+  "Karanpura": [
+    [84.9757, 23.8823],
+    "Important coal mining area in Jharkhand.",
+    "110,000 tons/year",
+    "55 sq km",
+    "2,800 employees"
+  ],
   "Daltonganj": [
     [84.0657, 24.042],
-    "Region with coal mining activities in Jharkhand."
+    "Region with coal mining activities in Jharkhand.",
+    "60,000 tons/year",
+    "40 sq km",
+    "1,700 employees"
   ],
-
   "Raniganj Coalfield": [
     [87.074, 23.6379],
-    "Oldest coalfield in India, located in West Bengal."
+    "Oldest coalfield in India, located in West Bengal.",
+    "200,000 tons/year",
+    "100 sq km",
+    "4,500 employees"
   ],
   "Dalingkot (Darjeeling)": [
     [88.1906, 26.9035],
-    "Mining region in Darjeeling district, West Bengal."
+    "Mining region in Darjeeling district, West Bengal.",
+    "20,000 tons/year",
+    "20 sq km",
+    "800 employees"
   ],
   "Birbhum": [
     [87.55, 23.84],
-    "Coal mining and agricultural region in West Bengal."
+    "Coal mining and agricultural region in West Bengal.",
+    "100,000 tons/year",
+    "70 sq km",
+    "3,200 employees"
   ],
   "Chinakuri": [
     [87.2711, 23.7261],
-    "Coal mining area in the Raniganj coalfields, West Bengal."
+    "Coal mining area in the Raniganj coalfields, West Bengal.",
+    "130,000 tons/year",
+    "80 sq km",
+    "3,600 employees"
   ],
-
   "Kamptee (Nagpur)": [
     [79.1269, 21.2619],
-    "Coal mining region near Nagpur, Maharashtra."
+    "Coal mining region near Nagpur, Maharashtra.",
+    "120,000 tons/year",
+    "65 sq km",
+    "2,900 employees"
   ],
-  "Wun field": [[78.9531, 20.0637], "Coal mining area in Maharashtra."],
-  "Wardha": [[78.608, 20.7453], "Known for coal deposits in Maharashtra."],
-  "Walarpur": [[78.7539, 19.9631], "Coal mining area in Maharashtra."],
-  "Ghughus": [[79.1072, 19.9453], "Important coal mining town in Maharashtra."],
-  "Warora": [[79.0035, 20.2281], "Coal mining town in Maharashtra."],
-
-  "Korba": [[82.6845, 22.3593], "Major coal-producing area in Chhattisgarh."],
-  "Bishrampur": [[82.4827, 23.2172], "Coal mining region in Chhattisgarh."],
-  "Sonhat": [[82.3595, 23.9842], "Coal mining region in Chhattisgarh."],
-  "Jhilmil": [[82.4878, 22.3746], "Coal mining region in Chhattisgarh."],
-  "Hasdo-Arand": [[82.6065, 22.9338], "Coal mining area in Chhattisgarh."],
+  "Wun field": [
+    [78.9531, 20.0637],
+    "Coal mining area in Maharashtra.",
+    "95,000 tons/year",
+    "50 sq km",
+    "2,500 employees"
+  ],
+  "Wardha": [
+    [78.608, 20.7453],
+    "Known for coal deposits in Maharashtra.",
+    "85,000 tons/year",
+    "48 sq km",
+    "2,100 employees"
+  ],
+  "Walarpur": [
+    [78.7539, 19.9631],
+    "Coal mining area in Maharashtra.",
+    "70,000 tons/year",
+    "40 sq km",
+    "1,800 employees"
+  ],
+  "Ghughus": [
+    [79.1072, 19.9453],
+    "Important coal mining town in Maharashtra.",
+    "110,000 tons/year",
+    "55 sq km",
+    "2,700 employees"
+  ],
+  "Warora": [
+    [79.0035, 20.2281],
+    "Coal mining town in Maharashtra.",
+    "90,000 tons/year",
+    "45 sq km",
+    "2,200 employees"
+  ],
+  "Korba": [
+    [82.6845, 22.3593],
+    "Major coal-producing area in Chhattisgarh.",
+    "250,000 tons/year",
+    "120 sq km",
+    "5,000 employees"
+  ],
+  "Bishrampur": [
+    [82.4827, 23.2172],
+    "Coal mining region in Chhattisgarh.",
+    "150,000 tons/year",
+    "70 sq km",
+    "3,500 employees"
+  ],
+  "Sonhat": [
+    [82.3595, 23.9842],
+    "Coal mining region in Chhattisgarh.",
+    "120,000 tons/year",
+    "60 sq km",
+    "2,900 employees"
+  ],
+  "Jhilmil": [
+    [82.4878, 22.3746],
+    "Coal mining region in Chhattisgarh.",
+    "130,000 tons/year",
+    "65 sq km",
+    "3,200 employees"
+  ],
+  "Hasdo-Arand": [
+    [82.6065, 22.9338],
+    "Coal mining area in Chhattisgarh.",
+    "140,000 tons/year",
+    "75 sq km",
+    "3,600 employees"
+  ],
   "Jharsuguda": [
     [84.0326, 21.8612],
-    "Coal mining and industrial hub in Odisha."
+    "Coal mining and industrial hub in Odisha.",
+    "170,000 tons/year",
+    "90 sq km",
+    "4,000 employees"
   ],
-  "Himgiri": [[84.2155, 21.7667], "Coal mining area in Odisha."],
-  "Rampur": [[84.1972, 21.6625], "Coal mining region in Odisha."],
-  "Talcher": [[85.2245, 20.9491], "Major coal mining center in Odisha."],
-
+  "Himgiri": [
+    [84.2155, 21.7667],
+    "Coal mining area in Odisha.",
+    "100,000 tons/year",
+    "55 sq km",
+    "2,500 employees"
+  ],
+  "Rampur": [
+    [84.1972, 21.6625],
+    "Coal mining region in Odisha.",
+    "85,000 tons/year",
+    "45 sq km",
+    "2,100 employees"
+  ],
+  "Talcher": [
+    [85.2245, 20.9491],
+    "Major coal mining center in Odisha.",
+    "220,000 tons/year",
+    "110 sq km",
+    "4,800 employees"
+  ],
   "Darrangiri (Garo Hills)": [
     [90.5154, 25.5463],
-    "Coal mining area in Meghalaya."
+    "Coal mining area in Meghalaya.",
+    "50,000 tons/year",
+    "30 sq km",
+    "1,200 employees"
   ],
   "Cherrapunji": [
     [91.7312, 25.2842],
-    "Coal mining and limestone area in Meghalaya."
+    "Coal mining and limestone area in Meghalaya.",
+    "60,000 tons/year",
+    "35 sq km",
+    "1,500 employees"
   ],
-  "Liotryngew": [[91.5842, 25.3533], "Coal mining region in Meghalaya."],
+  "Liotryngew": [
+    [91.5842, 25.3533],
+    "Coal mining region in Meghalaya.",
+    "40,000 tons/year",
+    "25 sq km",
+    "1,000 employees"
+  ],
   "Maolong (Khasi & Jaintia Hills)": [
     [91.6119, 25.6034],
-    "Coal mining area in Meghalaya."
+    "Coal mining area in Meghalaya.",
+    "70,000 tons/year",
+    "40 sq km",
+    "1,800 employees"
   ],
   "Langrin coalfields (Khasi & Jaintia Hills)": [
     [91.3464, 25.4051],
-    "Coal mining field in Meghalaya."
+    "Coal mining field in Meghalaya.",
+    "80,000 tons/year",
+    "50 sq km",
+    "2,000 employees"
   ],
   "Singrauli": [
     [82.6574, 24.1993],
-    "Major coal-producing region in Madhya Pradesh."
+    "Major coal-producing region in Madhya Pradesh.",
+    "200,000 tons/year",
+    "100 sq km",
+    "4,500 employees"
   ],
-  "Sohagpur": [[81.7194, 23.3082], "Coal mining area in Madhya Pradesh."],
-  "Johila": [[81.9819, 23.4061], "Coal mining field in Madhya Pradesh."],
-  "Umaria": [[80.8372, 23.5245], "Coal mining town in Madhya Pradesh."],
+  "Sohagpur": [
+    [81.7194, 23.3082],
+    "Coal mining area in Madhya Pradesh.",
+    "120,000 tons/year",
+    "65 sq km",
+    "3,000 employees"
+  ],
+  "Johila": [
+    [81.9819, 23.4061],
+    "Coal mining field in Madhya Pradesh.",
+    "100,000 tons/year",
+    "55 sq km",
+    "2,500 employees"
+  ],
+  "Umaria": [
+    [80.8372, 23.5245],
+    "Coal mining town in Madhya Pradesh.",
+    "90,000 tons/year",
+    "50 sq km",
+    "2,200 employees"
+  ],
   "Satpura coalfield": [
     [78.2676, 22.101],
-    "Coal mining area in Madhya Pradesh."
+    "Coal mining area in Madhya Pradesh.",
+    "110,000 tons/year",
+    "60 sq km",
+    "2,800 employees"
   ],
-
-  "Ledo": [[95.7517, 27.3006], "Coal mining town in Assam."],
-  "Makum": [[95.491, 27.4863], "Coal mining region in Assam."],
-  "Najira": [[94.7186, 26.9079], "Coal mining area in Assam."],
-  "Janji": [[94.8063, 26.7311], "Coal mining region in Assam."],
-  "Jaipur": [[95.4887, 27.0137], "Coal mining area in Assam."],
-
-  "Neyveli": [
-    [79.4826, 11.6066],
-    "Largest lignite coal mine in Tamil Nadu, India."
+  "Chandrapur": [
+    [79.2961, 19.9523],
+    "Coal mining and industrial town in Maharashtra.",
+    "180,000 tons/year",
+    "95 sq km",
+    "4,200 employees"
+  ],
+  "Asansol": [
+    [86.9915, 23.6833],
+    "Coal mining and industrial city in West Bengal.",
+    "190,000 tons/year",
+    "105 sq km",
+    "4,400 employees"
+  ],
+  "Nagpur": [
+    [79.0882, 21.1458],
+    "Industrial and coal mining hub in Maharashtra.",
+    "160,000 tons/year",
+    "85 sq km",
+    "3,800 employees"
+  ],
+  "Bilaspur": [
+    [82.1713, 22.0797],
+    "Coal mining and industrial city in Chhattisgarh.",
+    "150,000 tons/year",
+    "80 sq km",
+    "3,500 employees"
+  ],
+  "Umred": [
+    [79.325, 20.8541],
+    "Coal mining area near Nagpur, Maharashtra.",
+    "140,000 tons/year",
+    "75 sq km",
+    "3,200 employees"
   ]
 }
