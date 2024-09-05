@@ -87,14 +87,7 @@ function Data() {
             India's Import Export
           </h2>
           <p className="text-justify">
-            India plays a significant role in the global coal production
-            landscape, contributing 10.35% to the world's total output. As the
-            second-largest producer of coal after China, India's production is
-            driven by its growing energy needs and its reliance on coal as a
-            primary source of energy. The country has a vast reserve base, and
-            coal remains a critical component of India's energy strategy,
-            powering thermal power plants and supporting various industrial
-            activities.
+          India is one of the largest importers of coal, despite having substantial domestic reserves, due to high demand for power generation and industrial use. The country imports coal mainly from Indonesia, Australia, and South Africa to meet the shortfall in quality and quantity. Globally, while countries like China and the U.S. are major producers, India stands out for its heavy reliance on coal imports. In contrast, nations like Australia and Russia are leading coal exporters, supplying significant volumes to global markets.
           </p>
         </div>
         <div className="w-full">

@@ -114,7 +114,7 @@ function TransportType({ onEmissionChange }) {
     <h2 className="text-2xl font-action font-bold mb-4">
           Calculate Transport CO2 Emissions
         </h2>
-      <div className="flex space-x-4 justify-between">
+      <div className="flex justify-start space-x-4 ">
         <div
           className={`w-36 p-3 rounded-xl flex flex-col space-y-2 justify-center items-center text-white cursor-pointer transition-all duration-300 ${
             mode==="Truck" ? " bg-accent " : "bg-secondary/85 hover:bg-secondary"
@@ -187,10 +187,10 @@ function TransportType({ onEmissionChange }) {
               className="border-2 border-primary px-3 py-2 h-fit w-full  rounded-md relative"
             >
               <div>
-                <strong>Transport Type:</strong> {calc.coalType}
+                <strong>Transport Type:</strong> {calc.mode}
               </div>
               <div>
-                <strong>Transport Quantity:</strong> {calc.yearlyProduction}{" "}
+                <strong>Transport Quantity:</strong> {calc.tonnes}{" "}
                 tonnes
               </div>
               <div>

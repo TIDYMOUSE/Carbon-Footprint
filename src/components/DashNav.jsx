@@ -143,13 +143,6 @@ function DashNav() {
                 >
                   Dashboard
                 </NavLink>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-black/20 "
-                  onClick={closeDropdown}
-                >
-                  List Item 3
-                </a>
               </div>
             )}
           </div>
